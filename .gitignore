@@ -3,7 +3,7 @@
 # # dependencies
 node_modules/ 
 dist/
-.parcel-cache/
+
 
 # /.pnp
 # .pnp.js
@@ -43,4 +43,8 @@ Thumbs.db
 *.avi
 *.flv
 *.mov
-*.wmv
+*.wmv.parcel-cache/
+
+
+
+.parcel-cache/.parcel-cache/
