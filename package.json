@@ -1,0 +1,31 @@
+{
+  "name": "namaste-shikhar",
+  "version": "1.0.0",
+  "description": "This is my react projct",
+  
+  "scripts": {
+     "start": "parcel index.html",
+     "build": "parcel build index.html",
+     "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shikhar66/Food-Ordering-Website.git"
+  },
+  "author": "Shikhar Dixit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shikhar66/Food-Ordering-Website/issues"
+  },
+  "homepage": "https://github.com/shikhar66/Food-Ordering-Website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
