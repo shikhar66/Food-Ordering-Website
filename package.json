@@ -2,11 +2,10 @@
   "name": "namaste-shikhar",
   "version": "1.0.0",
   "description": "This is my react projct",
-  
   "scripts": {
-     "start": "parcel index.html",
-     "build": "parcel build index.html",
-     "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0"
   }
 }
