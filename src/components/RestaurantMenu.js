@@ -6,17 +6,7 @@ import Shimmer from "./Shimmer";
 const RestaurantMenu = () => {
     const {ResId } = useParams();
 
-    const [restaurant, setRestaurant] = useState({})
-
-    useEffect(() => {
-        getRestaurantInfo();
-    }, [])
-
-    async function getRestaurantInfo() {
-        const data = await fetch("https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId=3"+ResId);
-        const json = await data.json();
-        setRestaurant(json); //
-    }
+    const restaurant = useRestaurant(ResId);
 
 
     return (!restaurant)? <Shimmer/> : (
