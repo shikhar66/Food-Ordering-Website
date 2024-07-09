@@ -9,7 +9,7 @@ const Title = () => {
   return (
     <a href="/">
       <img
-        className="logo"
+        className="h-28 p-2"
         alt="logo"
         src={logo}
       />
@@ -19,15 +19,15 @@ const Title = () => {
 const Header = () => {
   const [isLoggedIn,setIsLoggedIn] = useState(false);
     return (
-      <div className="header">
+      <div className="flex justify-between bg-lime-200 shadow-lg sm:bg-lime-100 md:bg-lime-50  ">
         <Title />
         <div className="nav-items">
-          <ul>
-            <li><Link to="/">Home</Link></li> 
-            <li><Link to="/about">About</Link></li>
-            <li> <Link to="/contact">Contact</Link></li>
-            <li>Cart</li>
-            <li> <Link to="/instamart">Instamart</Link></li>
+          <ul className="flex py-10">
+            <li className="px-2"><Link to="/">Home</Link></li> 
+            <li className="px-2"><Link to="/about">About</Link></li>
+            <li className="px-2"> <Link to="/contact">Contact</Link></li>
+            <li className="px-2">Cart</li>
+            <li className="px-2"> <Link to="/instamart">Instamart</Link></li>
           </ul>
         </div>
         {isLoggedIn?<button onClick={()=>setIsLoggedIn(false)} >Log In</button>:<button onClick={()=>setIsLoggedIn(true)} >Log Out</button>}
