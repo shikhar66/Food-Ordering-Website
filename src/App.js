@@ -1,5 +1,5 @@
 import React from "react";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense,useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -11,15 +11,24 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/UserContext";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 const About = lazy(() => import("./components/About"));
 const AppLayout = () => {
+ const [user,setUser]= useState({
+  name:"Shikhar Dixit",
+  email:"shikhar.dixit@gmail.com",
+ })
+
   return (
     <>
+       <UserContext.Provider value ={{user:user,
+        setUser:setUser }}>
       <Header />
       <Outlet />
       <Footer />
+      </UserContext.Provider>
     </>
   );
 };
