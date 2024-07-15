@@ -28,7 +28,7 @@ const Body = () => {
     setFilteredRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     ); 
-    console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    //console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
   // if(filteredRestaurants?.length === 0) return <h1>No restaurant match your filter.</h1>
@@ -41,7 +41,7 @@ const Body = () => {
 
   if (!allRestaurants) return null;
 
-  console.log(allRestaurants.length);
+  
   return allRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (

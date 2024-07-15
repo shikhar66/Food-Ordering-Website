@@ -2,7 +2,7 @@ import { IMG_CDN_URL } from "../constants";
 import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 
-const RestaurantCard = ({name,cuisines,cloudinaryImageId,avgRating}) => {
+const  RestaurantCard = ({name,cuisines,cloudinaryImageId,avgRating}) => {
      const {user} = useContext(UserContext)    
     return (
       <div className="w-[200px] m-2 p-2 shadow-lg bg-lime-200" >
