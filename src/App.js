@@ -12,6 +12,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const Instamart = lazy(() => import("./components/Instamart"));
 const About = lazy(() => import("./components/About"));
@@ -23,12 +25,14 @@ const AppLayout = () => {
 
   return (
     <>
+       <Provider store={store}>
        <UserContext.Provider value ={{user:user,
         setUser:setUser }}>
       <Header />
       <Outlet />
       <Footer />
       </UserContext.Provider>
+      </Provider>
     </>
   );
 };
@@ -56,7 +60,7 @@ const appRouter = createBrowserRouter([
       },
       { path: "/contact", element: <Contact /> },
       {
-        path: "/restaurant/:id",
+        path: "/restaurant/:resId",
         element: <RestaurantMenu />,
       },
       {
