@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import { filterdata } from "../utils/Helper";
+import { filterdata } from "../utils/helper";
 import UserContext from "../utils/UserContext";
 
 const Body = () => {
