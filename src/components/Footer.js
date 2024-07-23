@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Footer = () => {
     return (
-      <footer className="bg-lime-50 py-8">
+      <footer className="bg-lime-100 py-8">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex flex-wrap justify-between">
           {/* Company Info */}

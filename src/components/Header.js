@@ -30,7 +30,7 @@ const Header = () => {
   const isOnline = useOnline();
 
     return (
-      <div className="flex justify-between bg-lime-50 shadow-lg  ">
+      <div className="flex justify-between bg-lime-100 shadow-lg  z-10 ">
         <Title />
         <div className="nav-items">
           <ul className="flex py-10">
