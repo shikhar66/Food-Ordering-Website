@@ -28,7 +28,7 @@ const Body = () => {
     setFilteredRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    //console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
   // if(filteredRestaurants?.length === 0) return <h1>No restaurant match your filter.</h1>
@@ -45,11 +45,11 @@ const Body = () => {
     <Shimmer />
   ) : (
     <>
-      <div className="search-container p-5 bg-lime-200 my-5">
+      <div className="search-container p-5 bg-lime-200 ">
         <input
           data-testid="search-input"
           type="text"
-          className="focus:bg-blue-200 p-2 m-2"
+          className="focus:bg-blue-200 p-2 m-2 rounded-md"
           placeholder="Search"
           value={searchInput}
           onChange={(e) => {
@@ -67,12 +67,13 @@ const Body = () => {
           Search
         </button>
         <input
+        className="focus:bg-blue-200 p-2 m-2 rounded-md"
           type="text"
-          value={user.name}
+          placeholder={user.name1}
           onChange={(e) => setUser({ name: e.target.value })}
         />
       </div>
-      <div className="flex flex-wrap " data-testid="res-list">
+      <div className="flex flex-wrap  items-stretch	" data-testid="res-list">
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link

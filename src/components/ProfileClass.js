@@ -5,8 +5,8 @@ class Profile extends React.Component {
         super(props);
         this.state={
             userInfo:{
-                name:"Dummy Name",
-                location:"Dummy Location",
+                name:"Shikhar Dixit",
+                location:"Lucknow,UP,India",
             }
         }
     }
@@ -31,7 +31,7 @@ class Profile extends React.Component {
         render(){
             return (
                 <div>
-                <h1> Profile Class Component </h1>
+                <h1 className="font-bold"> Profile Class Component </h1>
                 <img src={this.state.userInfo.avatar_url} />
                 <h2>Name: {this.state.userInfo.name}</h2>
                 <h2>Location: {this.state.userInfo.location}</h2>
